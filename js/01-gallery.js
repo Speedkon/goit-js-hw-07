@@ -19,6 +19,7 @@ galleryList.insertAdjacentHTML('beforeend', galleryMarkup);
 
 galleryList.addEventListener('click', e => {
     e.preventDefault();
+    if (e.target.nodeName !== 'IMG') return;
     const largeImageSrc = e.target.dataset.source;
     const imgAlt = e.target.alt;
 
